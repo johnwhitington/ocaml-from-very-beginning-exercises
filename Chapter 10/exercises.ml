@@ -19,7 +19,7 @@ let width_of_rect r =
   | Rectangle (w, _) -> w
 
 let rect_compare a b =
-  width_of_rect a > width_of_rect b
+  width_of_rect a < width_of_rect b
 
 let rec map f l =
   match l with
