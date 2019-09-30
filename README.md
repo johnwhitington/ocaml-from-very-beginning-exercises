@@ -13,7 +13,3 @@ in the file too.
 Chapter 16 has its own README file.
 
 In case of errata, please contact the author: john@coherentgraphics.co.uk
-
-John Whitington
-6th June 2013
-
