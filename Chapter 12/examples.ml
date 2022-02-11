@@ -72,4 +72,3 @@ let dictionary_of_file filename =
     let dict = dictionary_of_channel ch in
       close_in ch;
       dict
-

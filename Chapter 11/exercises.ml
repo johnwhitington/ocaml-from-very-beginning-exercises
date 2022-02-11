@@ -82,5 +82,3 @@ let rec total (Branch (e, l)) =
 
 let rec map_mtree f (Branch (e, l)) =
   Branch (f e, map (map_mtree f) l)
-
-
