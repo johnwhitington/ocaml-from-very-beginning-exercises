@@ -43,6 +43,14 @@ let rec dictionary_of_pairs_inner keys_seen l =
 let dictionary_of_pairs l =
   dictionary_of_pairs_inner [] l
 
+let rec add k v d =
+  match d with
+    [] -> [(k, v)]
+  | (k', v')::t ->
+      if k = k'
+        then (k, v) :: t
+        else (k', v') :: add k v t
+
 let rec union a b =
   match a with
     [] -> b
