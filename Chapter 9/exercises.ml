@@ -35,7 +35,7 @@ let truncate_l n l =
   if length l >= n then take n l else l
 
 let truncate_l n l =
-  try take n l with Invalid_argument "take" -> l 
+  try take n l with Invalid_argument _ -> l 
 
 let truncate n ll =
   map (truncate_l n) ll

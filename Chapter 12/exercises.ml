@@ -28,7 +28,7 @@ let rec read_three () =
         let z = read_int () in
           (x, y, z)
   with
-    Failure "int_of_string" ->
+    Failure _ ->
       print_string "failed to read integers; please try again";
       print_newline ();
       read_three ()
@@ -40,7 +40,7 @@ let rec read_dict_number n =
         let name = read_line () in
           (i, name) :: read_dict_number (n - 1)
     with
-      Failure "int_of_string" ->
+      Failure _ ->
         print_string "This is not a valid integer.";
         print_newline ();
         print_string "Please enter integer and name again.";
@@ -56,7 +56,7 @@ let rec read_dict () =
     let n = read_int () in
       if n < 0 then raise BadNumber else read_dict_number n
   with
-    Failure "int_of_string" ->
+    Failure _ ->
       print_string "Not a number. Try again";
       print_newline ();
       read_dict ()

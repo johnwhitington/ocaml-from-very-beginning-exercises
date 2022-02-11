@@ -36,7 +36,7 @@ let rec read_dict () =
         let name = read_line () in
           (i, name) :: read_dict ()
   with
-    Failure "int_of_string" ->
+    Failure _ ->
       print_string "This is not a valid integer. Please try again.";
       print_newline ();
       read_dict ()
